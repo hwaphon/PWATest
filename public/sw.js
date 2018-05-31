@@ -11,9 +11,9 @@ this.addEventListener('install', event => {
 			console.log('caches success');
 			return cache.addAll([
 				'/',
-				'/index.html',
-				'/index.css',
-				'/assets/pwa.png'
+				'./index.html',
+				'./index.css',
+				'./assets/pwa.png'
 			]);
 		})
 	)
