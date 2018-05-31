@@ -1,0 +1,14 @@
+{
+  "short_name": "PWAAPP",
+  "name": "PWA WEB APP",
+  "icons": [
+    {
+      "src": "/assets/pwa.png",
+      "type": "image/png",
+      "sizes": "48×48"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "blue"
+}

@@ -1,0 +1,15 @@
+/*
+* @Author: hwaphon
+* @Date:   2018-05-31 12:39:08
+* @Last Modified by:   hwaphon
+* @Last Modified time: 2018-05-31 12:40:01
+*/
+div {
+	width: 480px;
+	height: 320px;
+	margin: 48px auto;
+
+	text-align: center;
+	font-size: 32px;
+	font-family: sans-serif;
+}
