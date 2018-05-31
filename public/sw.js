@@ -10,7 +10,7 @@ this.addEventListener('install', event => {
 		caches.open('my-test-cache-v1').then(cache => {
 			console.log('caches success');
 			return cache.addAll([
-				'/',
+				'./',
 				'./index.html',
 				'./index.css',
 				'./assets/pwa.png'
