@@ -21,15 +21,23 @@
 					});
 			});
 
+			let deferredPrompt = null;
 			window.addEventListener('beforeinstallprompt', (e) => {
-				e.userChoice.then(choiceResult => {
-					if (choiceResult.outcome === 'dismissed') {
-						console.log('用户取消了安装');
-					} else {
-						console.log('用户安装了应用');
-					}
-				});
+				deferredPrompt = e;
+
+				e.preventDefault();
+				return false;
 			});
+
+			setTimeout(() => {
+				if (deferredPrompt !== null) {
+					deferredPrompt.prompt();
+					deferredPrompt.userChoice.then((choiceResult) => {
+						console.log(choiceResult.outcome);
+					});
+					deferredPrompt = null;
+				}
+			}, 2000);
 		}
 	</script>
 </body>
