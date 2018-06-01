@@ -5,10 +5,10 @@
 * @Last Modified time: 2018-05-31 14:36:47
 */
 
+
 this.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open('my-test-cache-v1').then(cache => {
-			console.log('caches success');
 			return cache.addAll([
 				'./',
 				'./index.html',

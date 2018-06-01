@@ -20,6 +20,16 @@
 						console.log('ServiceWorker registration failed, ' + err);
 					});
 			});
+
+			window.addEventListener('beforeinstallprompt', (e) => {
+				e.userChoice.then(choiceResult => {
+					if (choiceResult.outcome === 'dismissed') {
+						console.log('用户取消了安装');
+					} else {
+						console.log('用户安装了应用');
+					}
+				});
+			});
 		}
 	</script>
 </body>
